@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_6</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button id="valider" name="valider" onclick="recupValue()">Valider</button>
+        </form>
+        <script>
+        function recupValue() {
+          var nombre1 = document.getElementById('premier_nombre').value;
+          var nombre2 = document.getElementById('deuxieme_nombre').value;
+          if (isNaN(nombre1) == true || isNaN(nombre2) == true) {
+            alert('erreur');
+          }
+          else {
+            nombre1 = parseFloat(nombre1);
+            nombre2 = parseFloat(nombre2);
+        var reste = (nombre1 % nombre2);
+        alert(reste);
+        }
+      }
+        </script>
+    </body>
+</html>
